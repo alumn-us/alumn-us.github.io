@@ -143,9 +143,9 @@ form > input[type="submit"]:hover {
 
   <input type="text" placeholder="Institute Name (required)"  name="entry.213654828" required >
   <input type="text" placeholder="Address (required)" name="entry.404410013" required >
-  <input type="text" placeholder="Number of Alumni ( Ex Student) " name="entry.233648852" >
-  <input type="text" placeholder="Contact Number (required)" name="entry.22176659" required>
-  <input type="text" placeholder="Email "  name="entry.705785414" >
+  <input type="text" placeholder="Number of Alumni ( Ex Student) " name="entry.233648852" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
+  <input type="text" placeholder="Contact Number (required)" name="entry.22176659" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
+  <input type="text" placeholder="Email "  name="entry.705785414" pattern="^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$" >
   <input type="text" placeholder="Contact Person "  name="entry.263667477" >
   <textarea placeholder="Message " name="entry.511208054"></textarea>
   <input type="submit" value="Submit">
