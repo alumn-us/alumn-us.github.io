@@ -137,7 +137,9 @@ form > input[type="submit"]:hover {
 						Back</p>
 				</header>
 		<div class="container">
-<form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSd8V97RumzblhKjp16kKml1z3FCBEbPnbbkv75eBaewJfVcHg/formResponse" method="Post">
+			<script type="text/javascript">var submitted=false</script>
+			<iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;" onload="if(submitted){window.location='thank.html';}"></iframe>
+<form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSd8V97RumzblhKjp16kKml1z3FCBEbPnbbkv75eBaewJfVcHg/formResponse" method="Post" target="hiddenConfirm" onsubmit="submitted=true">
 
   <input type="text" placeholder="Institute Name (required)"  name="entry.213654828" required >
   <input type="text" placeholder="Address (required)" name="entry.404410013" required >
