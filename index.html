@@ -194,6 +194,49 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css
 							<ul class="actions special">
 								<li><a href="more-what-we-do.html" class="button">Learn More</a></li>
 							</ul>
+							<div class="container">
+        <h2 class="text-center font-weight-bold">Our Partners</h2>
+        <section class="customer-logos slider">
+            <div class="slide"><img src="images/adidas.png" alt="logo"></div>
+            <div class="slide"><img src="images/facebook.png" alt="logo"></div>
+            <div class="slide"><img src="images/google.png" alt="logo"></div>
+            <div class="slide"><img src="images/instagram.png" alt="logo"></div>
+            <div class="slide"><img src="images/nike.png" alt="logo"></div>
+            <div class="slide"><img src="images/twitter.png" alt="logo"></div>
+            <div class="slide"><img src="images/uber.png" alt="logo"></div>
+            <div class="slide"><img src="images/youtube.png" alt="logo"></div>
+        </section>
+    </div>
+
+    <p class="copy text-center font-weight-bold">All Rights Reserved &copy; Make Dev</p>
+    
+
+    <script>
+    
+    $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover:false,
+            responsive: [{
+                breakpoint: 768,
+                setting: {
+                    slidesToShow:4
+                }
+            }, {
+                breakpoint: 520,
+                setting: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+
+    </script>
 						</footer>
 					</div>
 				</section>
