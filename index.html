@@ -6,6 +6,31 @@
 -->
 <html>
 	<head>
+		<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 		<link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 		<title>Alumn-us</title>
@@ -274,11 +299,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css
 <center><h2>Our Clients In Previous Three Months</h2></center>
 					<section class="articles">
 
-								<div class="images">&times;
-<img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="auto" height="auto">
-  <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="" width="Auto" height="auto">
-
+								<div class="row">
+  <div class="column">
+    <img src="img_snow.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
 </div>
+
 						</section>
 				<header class="major" style="margin: 0 0 0.01em 0;"></header>
 			<!-- Five -->
