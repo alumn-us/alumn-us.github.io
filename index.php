@@ -1,0 +1,395 @@
+<?php
+include("includes/header.php");
+?>
+ <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="assets/img/hero-carousel/hero-carousel-6.jpg" alt="">
+          <div class="container">
+            <h2>The Future Of Managing Alumni Relations Is Here.</h2>
+            <p>And there are no teleports or flying cars. Just emotions, efforts & engagement.</p>
+            <a href="contact" class="btn-get-started">Request Demo</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-5.jpg" alt="">
+          <div class="container">
+            <h2>Connecting Alumni, Strengthening Networks.</h2>
+            <p>Bringing alumni together to foster connections, share opportunities, and build a thriving community.</p>
+            <a href="contact" class="btn-get-started">Request Demo</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
+          <div class="container">
+            <h2>Innovating Alumni Engagement.</h2>
+            <p>Building stronger connections through smart technology, meaningful interactions, and lasting alumni
+              relationships.</p>
+            <a href="contact" class="btn-get-started">Request Demo</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row position-relative">
+
+          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="assets/img/about.jpg">
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="inner-title">What Will We Do For You?</h2>
+            <div class="our-story">
+              <!-- <h4>Est 1988</h4> -->
+              <h3>Strengthening Bonds with Care</h3>
+              <p>We handle everything with dedication and love, focusing solely on fostering meaningful connections,
+                nurturing relationships, and creating a lasting impact within the alumni community.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Building strong and lasting alumni connections</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Creating opportunities for meaningful engagement</span>
+                </li>
+                <li><i class="bi bi-check-circle"></i> <span>Fostering a supportive and thriving community</span></li>
+              </ul>
+              <p>We approach every interaction with passion and dedication, strengthening relationships, fostering
+                trust, and creating a sense of belonging.</p>
+
+              <div class="watch-video d-flex align-items-center position-relative">
+                <i class="bi bi-play-circle"></i>
+                <a href="https://youtu.be/OTaU-xlsZss" class="glightbox stretched-link">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon12.png" alt="Creating & Managing Alumni Database">
+              </div>
+              <h3>Creating & Managing Alumni Database</h3>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon2.png" alt="Plan & Organise Memorable Alumni Meets">
+              </div>
+
+              <h3>Plan & Organise Memorable Alumni Meets</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon3.png" alt="Legal Registration & Compliances of Laws">
+              </div>
+
+              <h3>Legal Registration & Compliances of Laws</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon16.png" alt="Provide Professional Networking Space">
+              </div>
+
+              <h3>Provide Professional Networking Space</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item item-indigo position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon6.png" alt="Continuous Engagement & Communication Through E-mails">
+              </div>
+
+              <h3>Continuous Engagement & Communication Through E-mails</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon17.png" alt="Raise Funds Through Quick & Easy Online Payments">
+              </div>
+
+              <h3>Raise Funds Through Quick & Easy Online Payments</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon8.png" alt="Involve Alumni in Overall Development of Current Students">
+              </div>
+
+              <h3>Involve Alumni in Overall Development of Current Students</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon9.png" alt="Involve Alumni in Overall Development of Current Students">
+              </div>
+
+              <h3>Dedicated Website for Enriching Experience & Interactive Layout</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon10.png" alt="Identify & Showcase Alumni Achievers">
+              </div>
+
+              <h3>Identify & Showcase Alumni Achievers</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon11.png" alt="Manage Chapters, Units & Interest Groups With Great Ease">
+              </div>
+
+              <h3>Manage Chapters, Units & Interest Groups With Great Ease</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <img src="assets/img/icons/icon15.png" alt="One Stop Help-desk For All Queries">
+              </div>
+
+              <h3>One Stop Help-desk For All Queries</h3>
+
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us & Alumni Connections</h2>
+        <p>Building a strong alumni network to foster connections, create opportunities, and inspire lifelong
+          engagement.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">About Us</li>
+            <li data-filter=".filter-product">Alumni Network</li>
+            <li data-filter=".filter-branding">Our Purpose</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <h2>Who Are We?</h2>
+              <p>Creator & Caretaker of Alumni Relationships</p>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <h2>Why Alumni Network Is Important?</h2>
+              <p>Reasons, Relating to You & Your Students-Alumni for Whom You Took Responsibility Years Back</p>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <h2>Mission, Vision & Values</h2>
+              <p>Something which we work for</p>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <p>We are just what you need for taking care of all your alumni related concerns. We serve you by
+                building, nurturing and growing your relationship with your all alumni. We promise to keep them more
+                than happy.</p>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <p>Your True Nostalgic Ambassadors, Fund Raiser & Networking platform</p>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <p>
+                Mission: To be among top contributors in the space of Alumni relationship management.
+              </p>
+              <p>
+                Values: Nurturing relationships while sticking to our ethics. Always.
+              </p>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              From legal to IT related requirement, from event to fund management, from engaging them to building
+              networks; we take pride in managing and enhancing every aspect of your relationship with your alumni.
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <p>Offering Career Guidance, Mentorships-Scholarships and Employablity to Students</p>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <p>
+                Vision: Giving all alumni relationship services to Educational, Corporate & Social institution and thus
+                helping everyone to grow together in multiple ways.
+              </p>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Clients</h2>
+        <p>Our Clients In Previous Three Months</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0 clients-wrap">
+
+          <div class="col-xl-4 col-md-4 client-logo">
+            <img src="assets/img/clients/Untitled.jpg" class="img-fluid" alt="">
+            <h4>LSAB, Churu</h4>
+            <p>(JK Paper-Singhania Trust)</p>
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-4 col-md-4 client-logo">
+            <img src="assets/img/clients/Untitled2.jpg" class="img-fluid" alt="">
+            <h4>Seven Eleven Education Society</h4>
+            <p>Mira Bhaynader</p>
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-4 col-md-4 client-logo">
+            <img src="assets/img/clients/Untitled3.jpg" class="img-fluid" alt="">
+            <h4>RVG Education Foundation</h4>
+            <p>Andheri</p>
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-4 col-md-4 client-logo">
+            <img src="assets/img/clients/sha.png" class="img-fluid" alt="" style="width: 70%;">
+            <h4 class="text-center">SAHYADRI SHIKSHAN SEVA MANDAL</h4>
+            <p>Nayagaon</p>
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-4 col-md-4 client-logo">
+            <img src="assets/img/clients/bps_logo_fin3_tr (1).png" class="img-fluid" alt="">
+            <h4>Bhartiya Public School</h4>
+            <p>Sikar Rajasthan</p>
+          </div>
+          <div class="col-xl-4 col-md-4 client-logo">
+            <img src="/assets/img/clients/logo.webp" class="img-fluid" alt="">
+            <h4>Neiilworld School</h4>
+            <p>Indore By Pass Road, Guna</p>
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Clients Section -->
+
+
+    <!-- Certification Section -->
+    <section id="clients" class="clients section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Credentials</h2>
+        <!-- <p>We Are ISO Certified Company</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0 clients-wrap">
+
+          <div class="col-xl-6 col-md-6 client-logo">
+            <img src="assets/img/certifications/iso.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-6 col-md-6 client-logo">
+            <img src="assets/img/certifications/Bondepth DPIIT Startup certificate_page-0001.jpg" class="img-fluid"
+              alt="">
+          </div>
+          <!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Clients Section -->
+
+  </main>
+<?php
+include('includes/footer.php');
+?>
