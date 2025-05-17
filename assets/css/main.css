@@ -806,7 +806,7 @@ section,
   padding: 0;
   margin: 0;
   position: relative;
-   background: linear-gradient(to right, #a3eca3, #fcfcfb);
+   /* background: linear-gradient(to right, #a3eca3, #fcfcfb); */
 }
 
 @media (max-height: 500px),
