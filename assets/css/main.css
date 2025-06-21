@@ -802,7 +802,7 @@ section,
 
 .hero .carousel {
   width: 100%;
-  min-height: calc(100vh - 75px);
+  min-height: calc(125vh - 75px);
   padding: 0;
   margin: 0;
   position: relative;
@@ -812,7 +812,7 @@ section,
 @media (max-height: 500px),
 (max-width: 1200px) {
   .hero .carousel {
-    min-height: calc(100vh - 48px);
+    min-height: calc(125vh - 48px);
   }
 }
 
