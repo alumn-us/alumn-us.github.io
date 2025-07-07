@@ -816,10 +816,13 @@ section,
   }
 }
 
-
-
+@media (max-width: 768px) {
+  .hero .container h2 {
+      font-size: 32px !important;
+  }
+}
 .hero .carousel-item {
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   background-size: cover;
   background-position: center;
@@ -838,6 +841,7 @@ section,
 .hero .container h2 {
   font-size: 45px;
   font-weight: 600;
+  margin-top: 30px;
 }
 .hero .container h2 .color{
 color: var(--accent-color);
