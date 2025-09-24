@@ -793,8 +793,9 @@ section,
   margin-bottom: 0;
 }
 
+
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section - Responsive Version
 --------------------------------------------------------------*/
 .hero {
   padding: 0;
@@ -802,91 +803,184 @@ section,
 
 .hero .carousel {
   width: 100%;
-  min-height: calc(125vh - 75px);
-  padding: 0;
+  /* Use min-height with flexible fallback */
+  min-height: max(600px, 80vh);
+  padding: 20px 0;
   margin: 0;
   position: relative;
-   /* background: linear-gradient(to right, #a3eca3, #fcfcfb); */
+  display: flex;
+  align-items: center;
 }
 
-@media (max-height: 500px),
-(max-width: 1200px) {
+/* Tablet and smaller laptops */
+@media (max-width: 1200px) {
   .hero .carousel {
-    min-height: calc(125vh - 48px);
+    min-height: max(550px, 70vh);
+    padding: 15px 0;
   }
 }
 
-@media (max-width: 768px) {
-  .hero .container h2 {
-      font-size: 32px !important;
+/* Mobile landscape and small tablets */
+@media (max-width: 992px) {
+  .hero .carousel {
+    min-height: max(500px, 60vh);
+    padding: 15px 0;
   }
 }
+
+/* Mobile portrait */
+@media (max-width: 768px) {
+  .hero .carousel {
+    min-height: auto;
+    padding: 20px 0 40px 0;
+  }
+  
+  .hero .container h2 {
+    font-size: 28px !important;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .hero .carousel {
+    padding: 15px 0 30px 0;
+  }
+  
+  .hero .container h2 {
+    font-size: 24px !important;
+  }
+}
+
+/* Very small screens */
+@media (max-height: 600px) {
+  .hero .carousel {
+    min-height: auto;
+    padding: 10px 0 20px 0;
+  }
+}
+
 .hero .carousel-item {
-  /* position: absolute; */
-  inset: 0;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  min-height: inherit;
+  padding: 20px 0;
 }
 
 .hero .container {
   position: relative;
   text-align: center;
-  padding-bottom: 30px;
   z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
+
 .hero .container h2 {
   font-size: 45px;
   font-weight: 600;
-  margin-top: 30px;
+  margin: 20px 0 30px 0;
+  line-height: 1.2;
 }
-.hero .container h2 .color{
-color: var(--accent-color);
+
+.hero .container h2 .color {
+  color: var(--accent-color);
 }
+
 .hero-images {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 25px;
   flex-wrap: wrap;
+  margin: 30px 0;
 }
 
 .hero-images img {
   width: 100%;
-  max-width: 500px;
+  max-width: 450px;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
 }
 
+.hero-images ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 450px;
+}
 
-/* .carousel-fade .carousel-item {
-  transition: opacity 1.2s ease-in-out;
-} */
+.hero-images ul li {
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 992px) {
+  .hero-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .hero-images img,
+  .hero-images ul {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    padding: 0 20px;
+  }
+  
+  .hero-images {
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .hero-images ul li {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .container {
+    padding: 0 15px;
+  }
+  
+  .hero-images ul li {
+    font-size: 13px;
+    padding: 5px 0;
+  }
+}
+
+/* Animation styles */
 .carousel-item h2,
 .carousel-item p,
-.carousel-item a {
+.carousel-item a,
+.carousel-item .hero-images {
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateY(20px);
   transition: all 0.6s ease-in-out;
 }
 
 .carousel-item.active h2,
 .carousel-item.active p,
-.carousel-item.active a {
+.carousel-item.active a,
+.carousel-item.active .hero-images {
   opacity: 1;
-  transform: translateX(0);
-}
-
-@media (max-width: 1200px) {
-  .hero .container {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 50px;
-  }
-  
+  transform: translateY(0);
 }
 
 .hero h2 {
@@ -897,7 +991,14 @@ color: var(--accent-color);
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 30px;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
   }
 }
 
@@ -906,12 +1007,21 @@ color: var(--accent-color);
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 8px 32px;
+  padding: 12px 32px;
   transition: 0.5s;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
   border-radius: 4px;
-  color:var(--accent-color);
+  color: var(--accent-color);
   border: 2px solid var(--accent-color);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero .btn-get-started {
+    padding: 10px 24px;
+    font-size: 14px;
+    margin: 15px 10px 10px 10px;
+  }
 }
 
 .hero .btn-get-started:hover {
@@ -919,6 +1029,7 @@ color: var(--accent-color);
   color: var(--contrast-color);
 }
 
+/* Carousel controls */
 .hero .carousel-control-prev {
   justify-content: start;
 }
@@ -955,20 +1066,29 @@ color: var(--accent-color);
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .hero .carousel-control-next-icon,
+  .hero .carousel-control-prev-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+
 .hero .carousel-control-prev,
 .hero .carousel-control-next {
   transition: 0.3s ease-in-out;
-  opacity: 0.5 ease-in-out;
+  opacity: 0.5;
 }
 
 .hero .carousel-control-prev:focus,
 .hero .carousel-control-next:focus {
-  opacity: 0.5 ease-in-out;
+  opacity: 0.5;
 }
 
 .hero .carousel-control-prev:hover,
 .hero .carousel-control-next:hover {
-  opacity: 0.9 ease-in-out;
+  opacity: 0.9;
 }
 
 .hero .carousel-control-prev:hover .carousel-control-next-icon,
@@ -991,9 +1111,38 @@ color: var(--accent-color);
   transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+  .hero .carousel-indicators {
+    bottom: 10px;
+  }
+  
+  .hero .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 .hero .carousel-indicators li.active {
   opacity: 1;
   background: var(--accent-color);
+}
+
+/* Utility classes for better content organization */
+@media (max-width: 768px) {
+  .hero .col-md-6 {
+    width: 100% !important;
+  }
+}
+
+/* Ensure proper spacing on very large screens */
+@media (min-width: 1400px) {
+  .hero .carousel {
+    min-height: max(700px, 85vh);
+  }
+  
+  .hero .container h2 {
+    font-size: 52px;
+  }
 }
 
 /*--------------------------------------------------------------
