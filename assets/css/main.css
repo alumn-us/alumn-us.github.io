@@ -1120,6 +1120,13 @@ section,
     width: 10px;
     height: 10px;
   }
+  .maps-div{
+    display: none;
+  }
+  .location-content{
+    margin-top: 20px;
+
+  }
 }
 
 .hero .carousel-indicators li.active {
