@@ -9,6 +9,32 @@
 (function() {
   "use strict";
 
+  const compatibilityStyles = document.createElement('style');
+  compatibilityStyles.textContent = `
+    .btn-premium-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 13px 22px;
+      border-radius: 4px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid rgba(255, 253, 248, 0.45);
+      color: #fffdf8 !important;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .btn-premium-outline:hover { color: #fff !important; border-color: #fffdf8; background: rgba(255,255,255,0.16); }
+    .inner-hero .premium-card p { color: #5b6862 !important; }
+    .inner-hero .premium-card strong { color: #13221d !important; }
+    .feature-list { display: flex; align-items: center; gap: 10px; }
+    .feature-list i { color: #0f7f5c; flex: 0 0 auto; }
+    .client-card img { max-height: 110px; object-fit: contain; margin-bottom: 18px; }
+    @media (max-width: 575px) { .btn-premium-outline { width: 100%; } }
+  `;
+  document.head.appendChild(compatibilityStyles);
+
   const originalSetAttribute = Element.prototype.setAttribute;
   Element.prototype.setAttribute = function(name, value) {
     if (this.tagName === 'SCRIPT' && String(name).toLowerCase() === 'crossorigin' && value === '*') return;
@@ -77,10 +103,7 @@
   if (scrollTop) {
     scrollTop.addEventListener('click', (e) => {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -90,12 +113,7 @@
 
   function aosInit() {
     if (typeof AOS === 'undefined') return;
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
+    AOS.init({ duration: 600, easing: 'ease-in-out', once: true, mirror: false });
   }
   aosInit();
   document.addEventListener('DOMContentLoaded', aosInit);
@@ -105,11 +123,7 @@
     const carousel = carouselIndicator.closest('.carousel');
     if (!carousel) return;
     carousel.querySelectorAll('.carousel-item').forEach((carouselItem, index) => {
-      if (index === 0) {
-        carouselIndicator.innerHTML += `<li data-bs-target="#${carousel.id}" data-bs-slide-to="${index}" class="active"></li>`;
-      } else {
-        carouselIndicator.innerHTML += `<li data-bs-target="#${carousel.id}" data-bs-slide-to="${index}"></li>`;
-      }
+      carouselIndicator.innerHTML += index === 0 ? `<li data-bs-target="#${carousel.id}" data-bs-slide-to="${index}" class="active"></li>` : `<li data-bs-target="#${carousel.id}" data-bs-slide-to="${index}"></li>`;
     });
   });
 
@@ -127,12 +141,7 @@
 
       let initIsotope;
       imagesLoaded(isotopeContainer, function() {
-        initIsotope = new Isotope(isotopeContainer, {
-          itemSelector: '.isotope-item',
-          layoutMode: layout,
-          filter: filter,
-          sortBy: sort
-        });
+        initIsotope = new Isotope(isotopeContainer, { itemSelector: '.isotope-item', layoutMode: layout, filter: filter, sortBy: sort });
       });
 
       isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
@@ -140,9 +149,7 @@
           const activeFilter = isotopeItem.querySelector('.isotope-filters .filter-active');
           if (activeFilter) activeFilter.classList.remove('filter-active');
           this.classList.add('filter-active');
-          if (initIsotope) {
-            initIsotope.arrange({ filter: this.getAttribute('data-filter') });
-          }
+          if (initIsotope) initIsotope.arrange({ filter: this.getAttribute('data-filter') });
           aosInit();
         }, false);
       });
@@ -152,16 +159,10 @@
   if (typeof Waypoint !== 'undefined') {
     let skillsAnimation = document.querySelectorAll('.skills-animation');
     skillsAnimation.forEach((item) => {
-      new Waypoint({
-        element: item,
-        offset: '80%',
-        handler: function() {
-          let progress = item.querySelectorAll('.progress .progress-bar');
-          progress.forEach(el => {
-            el.style.width = el.getAttribute('aria-valuenow') + '%';
-          });
-        }
-      });
+      new Waypoint({ element: item, offset: '80%', handler: function() {
+        let progress = item.querySelectorAll('.progress .progress-bar');
+        progress.forEach(el => { el.style.width = el.getAttribute('aria-valuenow') + '%'; });
+      }});
     });
   }
 
@@ -171,7 +172,6 @@
       const configElement = swiperElement.querySelector(".swiper-config");
       if (!configElement) return;
       let config = JSON.parse(configElement.innerHTML.trim());
-
       if (swiperElement.classList.contains("swiper-tab") && typeof initSwiperWithCustomPagination === 'function') {
         initSwiperWithCustomPagination(swiperElement, config);
       } else {
