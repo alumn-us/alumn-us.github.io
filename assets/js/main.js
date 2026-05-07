@@ -19,6 +19,7 @@
 
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
+  toggleScrolled();
 
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
@@ -79,6 +80,7 @@
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
+  toggleScrollTop();
 
   function aosInit() {
     if (typeof AOS === 'undefined') return;
@@ -89,6 +91,8 @@
       mirror: false
     });
   }
+  aosInit();
+  document.addEventListener('DOMContentLoaded', aosInit);
   window.addEventListener('load', aosInit);
 
   document.querySelectorAll('.carousel-indicators').forEach((carouselIndicator) => {
@@ -170,6 +174,7 @@
     });
   }
 
+  initSwiper();
   window.addEventListener("load", initSwiper);
 
 })();
