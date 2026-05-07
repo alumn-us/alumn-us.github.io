@@ -9,6 +9,12 @@
 (function() {
   "use strict";
 
+  const originalSetAttribute = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function(name, value) {
+    if (this.tagName === 'SCRIPT' && String(name).toLowerCase() === 'crossorigin' && value === '*') return;
+    return originalSetAttribute.call(this, name, value);
+  };
+
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
